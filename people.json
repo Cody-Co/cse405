@@ -1,0 +1,34 @@
+{
+  "people":[
+    {
+      "name":"Cody",
+      "age": 24,
+      "street": "1234 Main street",
+      "city": "San Bernardino"
+    },
+    {
+      "name": "John",
+      "age": 30,
+      "street": "7210 Central Ave",
+      "city": "Riverside"
+    },
+    {
+      "name": "Sarah",
+      "age": 25,
+      "street": "3125 Riverside Ct",
+      "city": "Corona"
+    },
+    {
+      "name": "David",
+      "age": 32,
+      "street": "7810 La Palma",
+      "city": "Hemet"
+    },
+    {
+      "name": "Joeseph",
+      "age": 21,
+      "street": "1280 2nd Ave",
+      "city": "San Bernardino"
+    }
+  ]
+}
