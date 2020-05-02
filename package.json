@@ -1,0 +1,23 @@
+{
+  "name": "cse405",
+  "version": "1.0.0",
+  "description": "cse405 npm",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cody-Co/cse405.git"
+  },
+  "author": "Cody Covington",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cody-Co/cse405/issues"
+  },
+  "homepage": "https://github.com/Cody-Co/cse405#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
