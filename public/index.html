@@ -1,11 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
-  <body>
-    <h1>Welcome to the Homepage</h1>
-  </body>
-</html>
+      <<!DOCTYPE html>
+      <html lang="en" dir="ltr">
+        <head>
+          <meta charset="utf-8">
+          <title>Homepage</title>
+          <link rel="stylesheet" href="./css/style.css">
+        </head>
+        <body>
+          <h1>Welcome to the Homepage</h1>
+          <ul id="people">
+          </ul>
+          <script type="text/javascript">
+            /*
+            var person = {
+              name: "Brad",
+              age: 35,
+              address:{
+                street: "1234 main st.",
+                city: "San Bernardino"
+              },
+              children: ["Brian", "Nicole"]
+            }
+
+            var people = [
+            {
+              name:"Cody",
+              age: "24"
+            },
+            {
+              name: "John",
+              age: 30
+            },
+            {
+              name: "Sarah",
+              age: 25
+            }
+            ];
+            console.log(person.children[0]);
+            console.log(person.address.street);
+            console.log(people[1].age);
+            var output = '';
+            for(var i = 0; i < people.length; i++){
+              //console.log(people[i].name + " is " + people[i].age + " years old.");
+              output += '<li>' + people[i].name + " is " + people[i].age + " years old."+ '</li>';
+            }
+            document.getElementById('people').innerHTML = output;
+            */
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200){
+                var response = JSON.parse(xhttp.responseText);
+                var people = response.people;
+
+                var output = '';
+                for(var i = 0; i < people.length; i++){
+                  //console.log(people[i].name + " is " + people[i].age + " years old.");
+                  output += '<li>' + people[i].name + " is " + people[i].age +
+                    " years old, and lives at " + people[i].street + ", " +
+                    people[i].city + '</li>'
+
+                }
+                document.getElementById('people').innerHTML = output;
+              }
+            };
+            xhttp.open("GET", "people.json", true);
+            xhttp.send();
+
+
+          </script>
+        </body>
+      </html>
